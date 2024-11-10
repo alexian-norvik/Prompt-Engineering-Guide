@@ -29,3 +29,10 @@ The `frequency penalty` applies a penalty on the next token proportional to how 
 The `presence penalty` also applies a penalty on repeated tokens but, unlike the frequency penalty, the penalty is the same for all repeated tokens. A token that appears twice and a token that appears 10 times are penalized the same. This setting prevents the model from repeating phrases too often in its response. If you want to model to generate diverse or creative text, you might want to use a higher presence penalty. Or, if you need the model to stay focused, try using a lower presence penalty.
 
 Similar to `temperature` and `top_p`, the general recommendation is to alter the frequency or presence penalty but not both.
+
+## Techniques
+
+### Zero-shot Prompting
+
+Large language models (LLMs) today, are tuned to follow instructions and are trained on large amounts of data. Large-scale training makes these models capable of performing some tasks in a "zero-shot" manner. Zero-shot prompting means that the prompt used to interact with the model won't contain examples or demonstrations. The zero-shot prompt directly instructs the model to perform a task without any additional examples to steer it. \
+When zero-shot doesn't work, it's recommended to provide demsontrations or examples in the prompt which leads to few-shot prompting.
